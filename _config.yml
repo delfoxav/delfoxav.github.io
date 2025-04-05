@@ -16,7 +16,8 @@ timezone: Europe/Zurich
 
 title: Xavier Delfosse - Portfolio # the main title
 
-tagline: A data scientist with a strong life science background, crazy guy and beer connaisseur # it will display as the subtitle
+tagline: A data scientist with a strong life science background, crazy guy and beer connaisseur my up to date resume
+resume_url: /assets/files/resume.pdf # the URL of your resume
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
@@ -37,7 +38,7 @@ social:
   name: Xavier Delfose
   email: xavier@windyplace.ch # change to your email address
   links:
-    - https://github.com/username # change to your GitHub homepage
+    - https://github.com/delfoxav # change to your GitHub homepage
     - www.linkedin.com/in/xavier-delfosse-9a62731ba
 
 # Site Verification Settings

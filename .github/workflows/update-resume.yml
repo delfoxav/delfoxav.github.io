@@ -1,0 +1,47 @@
+name: Update Resume PDF
+
+on:
+  push:
+    branches:
+      - main # or the branch you want to track
+  schedule:
+    - cron: "0 0 * * *" # Optional: Auto-run every day at midnight (UTC)
+
+jobs:
+  compile-resume:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout website repo
+        uses: actions/checkout@v2
+
+      - name: Checkout CV repo
+        uses: actions/checkout@v2
+        with:
+          repository: delfoxav/CV # Replace with your resume repo
+          token: ${{secrets.ACCESS_TOKEN}}
+          path: CV
+
+      - name: Set up LaTeX
+        run: |
+          sudo apt-get update || sudo apt-get update --fix-missing
+          sudo apt-get install texlive-full
+
+      - name: Compile LaTeX to PDF
+        run: |
+          cd CV
+          pdflatex resume.tex  # First run to generate .aux and .bcf files
+          biber resume  # Process the bibliography with Biber
+          pdflatex resume.tex  # Second run to incorporate the bibliography
+          pdflatex resume.tex  # Third run to finalize the document
+          mv resume.pdf ../assets/files/resume.pdf  # Move the generated PDF to the website repo
+
+      - name: Commit and push updated resume to website repo
+        run: |
+          git config --global user.email "xavier@windyplace.ch"
+          git config --global user.name "GitHub Actions"
+          git add assets/files/resume.pdf
+          git commit -m "Update resume PDF"
+          git push
+        env:
+          GITHUB_TOKEN: ${{secrets.ACCESS_TOKEN}}
