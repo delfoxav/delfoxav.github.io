@@ -8,21 +8,20 @@ tags: [MLops, MinIO, data science, machine learning, self-hosted]
 
 {% assign image_path = "/assets/images/projects/homemade_ml/self_hosted_minio/" %}
 
-# Create a self hosted cloud S3 storage with MinIO
 
 ## Table of Contents
 
 
-- [Create a self hosted cloud S3 storage with MinIO](#create-a-self-hosted-cloud-s3-storage-withminio)
-  - [Table of Contents](#table-of-contents)
-  - [Background](#background)
-  - [Used Hardware](#used-hardware)
-  - [Installing Ubuntu Server](#installing-ubuntu-server)
-  - [Preparing the data SSD](#preparing-the-data-ssd)
-  - [Install and Deploy MinIO](#install-and-deploy-minio)
-    - [TODO show a nice animation of creating a bucket and uploading data from the web UI](#todo-show-a-nice-animation-of-creating-a-bucket-and-uploading-data-from-the-web-ui)
-  - [Check and Test our MinIO server](#check-and-test-our-minio-server)
-  - [Conclusion](#conclusion)
+- [Table of Contents](#table-of-contents)
+- [Background](#background)
+- [Used Hardware](#used-hardware)
+- [Installing Ubuntu Server](#installing-ubuntu-server)
+- [Preparing the data SSD](#preparing-the-data-ssd)
+- [Installing Docker](#installing-docker)
+- [Installing and Deploying MinIO](#installing-and-deploying-minio)
+  - [TODO show a nice animation of creating a bucket and uploading data from the web UI](#todo-show-a-nice-animation-of-creating-a-bucket-and-uploading-data-from-the-web-ui)
+- [Checking and Testing our MinIO server](#checking-and-testing-our-minio-server)
+- [Conclusion](#conclusion)
 
 ## Background
 
@@ -99,7 +98,7 @@ You should then be bring back to your key list and see the new added key.
     </div>
 </div>
 
-Keep going with the ubuntu installation and you should reach a point where you can enable the OpenSSH service and grab your keys from github. Enter your github username, and it should find the new created key (you can check the sha). Once the key on the laptop, we can keep going with the installation of ubuntu. I'll let you install it as you want, simply install docker (while you can) and it should be good.
+Keep going with the ubuntu installation and you should reach a point where you can enable the OpenSSH service and grab your keys from github. Enter your github username, and it should find the new created key (you can check the sha). Once the key on the laptop, we can keep going with the installation of ubuntu. I'll let you install it as you want, don't install docker here tho  as it will install the snap version of docker which restrict docker file access to the home directory. We will install docker later on.
 
 <div style="text-align: center;">
     <img src="{{ image_path }}openSSH_ubuntu_config.png" alt="Enable OpenSSH service during Ubuntu installation">
@@ -235,13 +234,64 @@ sudo reboot
 
 SSH again to the laptop and (if your fstab isn't broken) you should be able to connect. You can also df -Th again and make sure that the ssd is correctly mounted.
 
+## Installing Docker
+
+Now we can install docker properly. I will follow the official [docker installation guide](https://docs.docker.com/engine/install/ubuntu/)(https://docs.docker.com/engine/install/ubuntu/) for Ubuntu.
+
+First, we make sure that there isn't any old version of docker installed:
+
+```bash
+ for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+ ```
+
+Now  we  setup the apt repository:
+
+```bash
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+ ```
+
+And we can install docker:
+
+```bash
+ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+
+We can check that everything went well by running:
+
+```bash
+sudo docker run hello-world
+```
+If everything went well, you should see a message saying that the installation was successful.
+
+```plaintext
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+```
 
 
-## Install and Deploy MinIO
+## Installing and Deploying MinIO
 
 Now we can install and deploy the docker version of MinIO. As always, most of the information are available on MinIO website.
 
-First we need to create a docker user group and add our user to it:
+First, we need to install docker-compose. You can do this by running the following command:
+
+```bash
+sudo apt-get install docker-compose
+```
+
+Then we need to add our user to the docker group. This will allow us to run docker commands without using sudo. You can do this by running the following command:
 
 ```bash
 sudo groupadd docker
@@ -301,7 +351,7 @@ We could create a bucket from the web UI and upload data from here as well. Howe
 
 ### TODO show a nice animation of creating a bucket and uploading data from the web UI
 
-## Check and Test our MinIO server
+## Checking and Testing our MinIO server
 
 MinIO has a python sdk. Install it on your working machine with:
 ```bash
