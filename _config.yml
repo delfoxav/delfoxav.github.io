@@ -16,8 +16,7 @@ timezone: Europe/Zurich
 
 title: Xavier Delfosse - Portfolio # the main title
 
-tagline: A data scientist with a strong life science background, crazy guy and beer connaisseur my up to date resume
-resume_url: /assets/files/resume.pdf # the URL of your resume
+tagline: A data scientist with a strong life science background, crazy guy and beer connaisseur
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
