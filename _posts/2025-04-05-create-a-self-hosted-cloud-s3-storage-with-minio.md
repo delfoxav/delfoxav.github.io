@@ -257,12 +257,6 @@ nano docker-compose.yml
 ```
 
 Here's the compose file:
-{% raw %}
-
-```yaml
-{% remote_include https://raw.githubusercontent.com/delfoxav/self_hosted_minIO/refs/heads/main/ressources/docker-compose.yml %}
-{% endraw %}
-
 
 ```yaml
 version: '3.8'
@@ -386,6 +380,6 @@ Go back on the minIO web UI and check for the created bucket. You should see the
 
 ## Conclusion
 
-obviously the overall goal wasn't to simply push some iris_data on a 2TB SSD, but it could be a good solution for something like a homemade MLops server ;)
+obviously the overall goal wasn't to simply push some iris_data on a 2TB SSD, but it could be a good solution for something like a homemade MLops server.
 
-You can find all the code used in this story here:
+You can find all the code used in this story [here](https://github.com/delfoxav/self_hosted_minIO)
