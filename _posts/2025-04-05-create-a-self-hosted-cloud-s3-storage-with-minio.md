@@ -9,7 +9,7 @@ tags: [MLops, MinIO, data science, machine learning, self-hosted]
 {% assign image_path = "/assets/images/projects/homemade_ml/self_hosted_minio/" %}
 
 # Create a self hosted cloud S3 storage with MinIO
-{% remote_include https://raw.githubusercontent.com/delfoxav/self_hosted_minIO/refs/heads/main/ressources/docker-compose.yml?token={secrets.token} %}
+{% remote_include https://raw.githubusercontent.com/delfoxav/self_hosted_minIO/refs/heads/main/ressources/docker-compose.yml?token={secrets.TOKEN} %}
 ## Table of Contents
 
 
