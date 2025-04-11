@@ -41,7 +41,9 @@ jobs:
           git config --global user.email "xavier@windyplace.ch"
           git config --global user.name "GitHub Actions"
           git add assets/files/resume.pdf
-          git commit -m "Update resume PDF"
-          git push
+          git commit -m "Update resume PDF" || echo "No changes to commit"
+          git remote set-url origin https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/delfoxav/delfoxav.github.io.git
+          git push origin main
+
         env:
           GITHUB_TOKEN: ${{secrets.ACCESS_TOKEN}}
