@@ -11,6 +11,12 @@ tags: [MLops, ClearML, data science, machine learning, self-hosted]
 # Create a self hosted MLops platform with ClearML
 
 ## Table of contents
+- [Create a self hosted MLops platform with ClearML](#create-a-self-hosted-mlops-platform-with-clearml)
+  - [Table of contents](#table-of-contents)
+  - [Background](#background)
+  - [Preparing for the installation](#preparing-for-the-installation)
+  - [Getting the docker-compose file](#getting-the-docker-compose-file)
+  - [Tesing the installation with a simple experiment](#tesing-the-installation-with-a-simple-experiment)
 
 ## Background
 The more I work with machine learning, the more I realize that the tools we use to manage our experiments and models are just as important as the algorithms themselves. In my job I already manage our MLops platform using MLFlow and I have been using it for a while now. However, I wanted to explore other options and see if there are any better alternatives out there. That's when I stumbled upon ClearML for my home lab. ClearML is an open-source platform that provides a complete solution for managing machine learning experiments, from data management to model deployment. It has a user-friendly interface and offers a wide range of features that make it easy to track and manage your experiments. In this post, I will walk you through the process of setting up ClearML on your own server, so you can start using it for your own projects.
@@ -67,8 +73,14 @@ docker-compose -f /opt/clearml/docker-compose.yml up -d
 ``` 
 
 If everything went well, you should be able to access the ClearML web interface by going to http://<your-server-ip>:8080 in your web browser. You should see the ClearML login page, that will simply ask for your fullname:
-![ClearML login page]({{ image_path }}clearml_login.png)
 
+<div style="text-align: center;">
+    <img src="{{ image_path }}clearml_login.png" alt="The ClearML login page" width="600px">
+    <p><em>Figure 1: The ClearML login page</em></p>
+</div>
 
-## Using our MinIO server as storage
+## Tesing the installation with a simple experiment
+#TODO
+
+```bash
 
