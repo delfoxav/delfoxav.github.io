@@ -22,10 +22,10 @@ jobs:
           token: ${{secrets.ACCESS_TOKEN}}
           path: CV
 
-      - name: Set up LaTeX
+      - name: Set up LaTeX and Ghostscript
         run: |
           sudo apt-get update || sudo apt-get update --fix-missing
-          sudo apt-get install texlive-full
+          sudo apt-get install texlive-full ghostscript
 
       - name: Compile LaTeX to PDF
         run: |
@@ -34,7 +34,15 @@ jobs:
           biber resume  # Process the bibliography with Biber
           pdflatex resume.tex  # Second run to incorporate the bibliography
           pdflatex resume.tex  # Third run to finalize the document
-          mv resume.pdf ../assets/files/resume.pdf  # Move the generated PDF to the website repo
+
+      - name: Compress PDF with Ghostscript
+        run: |
+          cd CV
+          # Create compressed version with Ghostscript
+          gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen \
+             -dNOPAUSE -dQUIET -dBATCH -sOutputFile=resume_compressed.pdf resume.pdf
+          # Move the compressed PDF to the website repo
+          mv resume_compressed.pdf ../assets/files/resume.pdf
 
       - name: Commit and push updated resume to website repo
         run: |
