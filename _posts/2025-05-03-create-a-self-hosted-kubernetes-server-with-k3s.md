@@ -37,11 +37,13 @@ That should be enough to install k3s on our server. We can check if we have a no
 ```bash
 sudo k3s kubectl get nodes
 ```
-
+<!--
 <div style="text-align: center;">
     <img src="{{ image_path }}running_node.png" alt="running_Kubernetes_node" width="600px">
     <p><em>Figure 1: My initial kubernetes node running</em></p>
 </div>
+-->
+
 
 ## installing the dashboard
 
@@ -86,10 +88,12 @@ That should be it. Now let's forward the dashboard to our localhost:
 ```bash
 kubectl port-forward -n kubernetes-dashboard service/kubernetes-dashboard -n kubernetes-dashboard 8080:443
 ```
+<!--
 <div style="text-align: center;">
     <img src="{{ image_path }}kubernetes_dashboard.png" alt="kubernetes_dashboard" width="600px">
     <p><em>Figure 2: The kubernetes dashboard</em></p>
 </div>
+-->
 
 Mmmhh it seems like it's asking for a token to access the dashboard. We can get this token by creating a service account and a cluster role binding. 
 
@@ -192,11 +196,12 @@ And finally we can get the token for the readonly-user service account:
 ```bash
 kubectl -n kubernetes-dashboard create token readonly-user
 ```
-
+<!--
 <div style="text-align: center;">
     <img src="{{ image_path }}kubernetes_dashboard_token.png" alt="kubernetes_dashboard_token" width="600px">
     <p><em>Figure 3: The kubernetes dashboard token</em></p>
 </div>
+-->
 
 It looks great! But I am not a fan of having to forward the dashboard to my localhost every time I want to access it. So let's set up an ingress controller to access the dashboard from the outside world (but still within my home network as I haven't exposed it to the internet). 
 
@@ -288,10 +293,12 @@ helm repo update
 
 We need to link it to our current clearml server. To do so we need some credentials. We can get them from the clearml UI. Go to Settings > Workspace and click Create New Credentials. A popup will appear with the credentials.
 
+<!--
 <div style="text-align: center;">
     <img src="{{ image_path }}clearml_credentials.png" alt="Getting_your_clearml_credentials" width="600px">
     <p><em>Figure 4: The clearml credentials button</em></p>
 </div>
+-->
 
 Then we can create a file called `values.yaml` with the following content:
 
