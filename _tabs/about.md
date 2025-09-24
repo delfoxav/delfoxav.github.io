@@ -5,8 +5,12 @@ order: 4
 ---
 ![Desktop View](/assets/images/me.jpg){: width="972" height="589" .w-50 .right}
 Hey There!  
-I'm Xavier, a Life Sciences engineer, currently  <span id="age"></span> years old.   
-            
+I'm Xavier, a Life Sciences engineer, currently  {% assign birth_year = 1996 %}{% assign birth_month = 11 %}{% assign birth_day = 12 %}
+{% assign now = 'now' | date: '%s' %}
+{% assign birthdate = birth_year | append: '-' | append: birth_month | append: '-' | append: birth_day | date: '%s' %}
+{% assign age = now | minus: birthdate | divided_by: 31556952 %}
+{{ age }} years old.
+
 I am kind of a free electron some might say. I old a Bachelor's degree in Life Sciences Technology from the University of Applied Sciences of Western Switzerland (HES-SO) and a Master's degree in Computational Life Sciences from the University of Applied Sciences of Zurich (ZHAW).
 
 Throughout my studies, I developed a strong interest in process control and automation, which led me to my Bachelor work at the Technical University of Vienna (TU Wien) in the field of process analytical technologies. I then continued my studies at the ZHAW, where I focused on the application of machine learning in life sciences. My Master's thesis was conducted in collaboration with the company I was working for at that time. It consisted of integrating an electronic nose to a multi-bioreactors system to monitor the fermentation process of a cell culture and serve as an early warning system for process deviations.
@@ -20,21 +24,3 @@ On the long time horizon, I would like to start a PhD in the field of machine le
 I decided to create this website to share my projects and ideas with the world. I hope you will find it interesting and that it will inspire you to do your own projects. If you have any questions or suggestions, please feel free to contact me.
 
     
-
-<script>
-    // Define the birthdate
-    const birthDate = new Date('1996-11-12'); // YYYY-MM-DD format
-    const today = new Date();
-
-    // Calculate the age
-    let age = today.getFullYear() - birthDate.getFullYear();
-    const m = today.getMonth() - birthDate.getMonth();
-
-    // If the birthday hasn't occurred yet this year, subtract 1 from age
-    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-        age--;
-    }
-
-    // Display the age
-    document.getElementById('age').innerText = age;
-</script>
