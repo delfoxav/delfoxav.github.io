@@ -179,8 +179,17 @@ Finally, we need to source the Gromacs binary to use it:
 source /usr/local/gromacs/bin/GMXRC
 ```
 
-And that's it, we can now check if Gromacs is installed properly by running:
+and we can add that line to our .bashrc file to have it sourced automatically at each terminal opening:
 
 ```bash
+echo "source /usr/local/gromacs/bin/GMXRC" >> ~/.bashrc
+source ~/.bashrc
+```
+
+
+
+And that's it, we can now check if Gromacs is installed properly by running:
+
+```bash 
 gmx --version
 ```
