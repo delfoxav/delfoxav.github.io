@@ -39,7 +39,7 @@ Basically it allows to simulate the behavior of atoms and molecules over time, w
 
 Gromacs is a widely used open-source software package for performing molecular dynamics simulations. Most of the time, Gromacs is installed on HPC clusters and most Life Science researchers will never have to install it through their life. But Eh, we all know I like doing such stuff.
 
-[Gromacs installation guide](manual.gromacs.org/current/install-guide/index.html) is.. complete, maybe too much. But we can divide it step by step. Please note, I am installing everything on a kde neon 64 bits (ubuntu based) system.
+[Gromacs installation guide](https://manual.gromacs.org/current/install-guide/index.html) is.. complete, maybe too much. But we can divide it step by step. Please note, I am installing everything on a kde neon 64 bits (ubuntu based) system.
 
 ## Getting the last version of C and C++ compilers
 
