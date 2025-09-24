@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Installing Gromacs for local Molecular Dynamics simulation
-author: Xavier Delfosse
 date: 2025-09-24 12:19 +0200
 categories: [Projects, Homemade ML, Life Science]
 tags: [data science, machine learning, self-hosted, molecular dynamics, simulation]
