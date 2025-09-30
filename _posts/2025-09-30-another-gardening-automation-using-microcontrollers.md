@@ -338,7 +338,7 @@ The debug node is optional, but it is always useful to have it to see what is go
 
 Connect the nodes as shown in the figure below:
 <div style="text-align: center;">
-    <img src="{{ image_path }}nodered_fnode_red_mqtt_flowlow.png" alt="The Node-RED flow diagram" width="600px">
+    <img src="{{ image_path }}node_red_mqtt_flow.png" alt="The Node-RED flow diagram" width="600px">
     <p><em>Figure 3: The Node-RED flow to read data from the mqtt broker and write it to the influxdb database</em></p>
 </div>
 
