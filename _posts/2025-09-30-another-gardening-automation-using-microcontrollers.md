@@ -20,7 +20,18 @@ tags: [self-hosted, iot, node-red, graphana]
     - [Grafana](#grafana)
     - [MQTT](#mqtt)
   - [Writting our compose file](#writting-our-compose-file)
-  - [Conclusion](#conclusion)
+    - [mqtt aka mosquitto](#mqtt-aka-mosquitto)
+    - [node-red](#node-red)
+    - [influxdb](#influxdb)
+    - [grafana](#grafana)
+    - [(optional) ESPHome](#optional-esphome)
+    - [Defining the volumes and networks](#defining-the-volumes-and-networks)
+    - [Putting everything together](#putting-everything-together)
+  - [Preparing each service](#preparing-each-service)
+    - [node-red](#node-red-1)
+    - [influxdb](#influxdb-1)
+    - [grafana](#grafana-1)
+    - [(optional) ESPHome](#optional-esphome)
 
 ## Background
 
@@ -303,3 +314,13 @@ Once gathered you should be able to start your services by running:
 ```bash
 docker-compose up -d
 ```
+
+## Preparing each service
+
+### node-red
+
+### influxdb
+
+### grafana
+
+### (optional) ESPHome
