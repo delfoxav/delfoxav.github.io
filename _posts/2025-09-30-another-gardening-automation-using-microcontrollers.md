@@ -325,11 +325,83 @@ First we connect to the Node-RED editor by going to http://<YOUR_SERVER_IP>:1880
 
 In there we will create a simply flow that reads data from the mqtt broker and writes it to the influxdb database.
 
+We will start with installing the required nodes. Go to the menu in the top right corner and select "Manage palette". In the "Install" tab, search for "node-red-contrib-influxdb" and install it.
+Then search for "node-red-contrib-mqtt-broker" and install it as well.
 
+Now we can create our flow. Drag and drop the following nodes to the editor:
 
+- mqtt in
+- influxdb out
+- debug 
+
+The debug node is optional, but it is always useful to have it to see what is going on.
+
+Connect the nodes as shown in the figure below:
+<div style="text-align: center;">
+    <img src="{{ image_path }}nodered_fnode_red_mqtt_flowlow.png" alt="The Node-RED flow diagram" width="600px">
+    <p><em>Figure 3: The Node-RED flow to read data from the mqtt broker and write it to the influxdb database</em></p>
+</div>
+
+I personally renamed the nodes to have a better overview of what is going on.
+
+Now we can configure each node. Double click on the mqtt in node to open the configuration window. In there, we will set the following parameters:
+
+- server: click on the pencil icon to add a new server
+  - server: mosquitto (the container name of the mqtt broker)
+  - port: 1883
+  - protocol: mqtt V5
+  - client id: (you can leave it empty, it will be generated automatically)
+  - keep alive: 60
+  - clean session: true
+
+- Action: subscribe to a single topic
+- Topic: gardening/chirp1 (the topic where the ESP32 will publish the data)
+- QoS: 2
+
+- Retain message handling: send retained message
+- Output: auto-detect(parsed JSON object, string or buffer)
+- Name: (whatever you want)
+
+We can move to the influxdb out node. Double click on it to open the configuration window. In there, we will set the following parameters:
+
+- Name: (whatever you want)
+- Server: click on the pencil icon to add a new server
+  - URL: http://influxdb:8086 (the container name of the influxdb database)
+  - version: 2.0
+  - token: We will set this up in a minute
+- Organization: The organization we set up for influxdb in the docker-compose file
+- Bucket: The bucket we set up for influxdb in the docker-compose file
+- Measurement: (whatever you want, e.g. soil_moisture)
+
+As you can see, we will need to set up a token for influxdb.
+
+Finally the debug node. Double click on it to open the configuration window. In there, we will set the following parameters:
+
+- Name: (whatever you want)
+- Output: msg.payload
+
+Our goal is simply to get the message directly in node-red to see what is going on.
 
 ### influxdb
 
+Now let's set up influxdb. We can connect to the influxdb UI by going to http://<YOUR_SERVER_IP>:8086
+
+You should probably get to a login page. Use the credentials you set up in the docker-compose file to log in.
+
+I'll let you explore the UI by yourself later (Check if your bucket and organization are created properly). But for now we need to create a token for Node-RED to be able to write data to the database.
+
+Go to the "Data" tab (the arrow pointing up) on the left side menu, then  select "API Tokens". Click on "Generate API Token" and select "Read/Write Token". In the next window, select the organization and bucket you set up in the docker-compose file. Finally give a name to your token and click on "Generate". You will probably don't need a full access token, so you can create a custom token with only write and read access to the bucket you created. Name the token "nodered-token" for example. Then copy the token, we will need it in Node-RED.
+
+We can now go back to Node-RED and paste the token in the influxdb out node.
+
+As we are here, we can also create a token for Grafana to be able to read data from the database. Go back to influxdb and create a new token with only read access to the bucket you created. Name the token "grafana-token" for example. Then copy the token, we will need it in Grafana. 
+
+
 ### grafana
 
+TODO
+
 ### (optional) ESPHome
+
+TODO
+
