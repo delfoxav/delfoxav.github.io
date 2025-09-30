@@ -321,7 +321,7 @@ Now that everything is up and running, we need to prepare each service.
 
 ### node-red
 
-First we connect to the Node-RED editor by going to http://<YOUR_SERVER_IP>:1880
+First we connect to the Node-RED editor by going to http://YOUR_SERVER_IP:1880
 
 In there we will create a simply flow that reads data from the mqtt broker and writes it to the influxdb database.
 
@@ -384,7 +384,7 @@ Our goal is simply to get the message directly in node-red to see what is going 
 
 ### influxdb
 
-Now let's set up influxdb. We can connect to the influxdb UI by going to http://<YOUR_SERVER_IP>:8086
+Now let's set up influxdb. We can connect to the influxdb UI by going to http://YOUR_SERVER_IP:8086
 
 You should probably get to a login page. Use the credentials you set up in the docker-compose file to log in.
 
