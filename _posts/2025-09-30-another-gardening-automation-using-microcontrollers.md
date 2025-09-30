@@ -315,7 +315,7 @@ Once gathered you should be able to start your services by running:
 docker-compose up -d
 ```
 
-## Preparing each servicex
+## Preparing each service
 
 Now that everything is up and running, we need to prepare each service.
 
