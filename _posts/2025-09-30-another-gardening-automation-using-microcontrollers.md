@@ -75,7 +75,7 @@ Grafana is an open-source platform for monitoring and observability. It allows y
 MQTT is a lightweight, publish-subscribe network protocol that transports messages between devices. I like to see mqtt as a sort of forum where devices can post messages to topics, and other devices can subscribe to these topics to receive the messages. In our case, the ESP32 will publish the data it collects from the chirp sensor to a topic, and Node-RED will subscribe to this topic to receive the data.
 
 <div style="text-align: center;">
-    <img src="{{ image_path }}mqtt_concept.png" alt="The gardening data flow diagram" width="600px">
+    <img src="{{ image_path }}mqtt_concept.jpeg" alt="The gardening data flow diagram" width="600px">
     <p><em>Figure 2: Representation of the MQTT protocol. source: (wallarm)[https://www.wallarm.com/what/mqtt-concept]</em></p>
 </div>
 
@@ -317,7 +317,16 @@ docker-compose up -d
 
 ## Preparing each service
 
+Now that everything is up and running, we need to prepare each service.
+
 ### node-red
+
+First we connect to the Node-RED editor by going to http://<YOUR_SERVER_IP>:1880
+
+In there we will create a simply flow that reads data from the mqtt broker and writes it to the influxdb database.
+
+
+
 
 ### influxdb
 
