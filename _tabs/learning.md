@@ -8,56 +8,54 @@ order: 6
 
 # 📚 What I'm Learning
 
-I’m keeping track of my learning journey here — the main topics I’m exploring, tutorials I’ve completed, and what’s next.
+Here I keep track of my current learning journey about a lot of topics.
+
 
 ---
 
 ## 🔬 Structural Biology
 
 **AlphaFold**  
-- [x] Intro course (EMBL-EBI overview)  
-- [x] Practical guide (ColabFold hands-on)  
-- [ ] Advanced modeling & multimer prediction  
-
-<div style="background:#eee; border-radius:10px; overflow:hidden; width:300px; margin:6px 0">
-  <div style="background:#4caf50; width:66%; padding:4px 0; text-align:center; color:white">66%</div>
-</div>
+- [ ] A practical guide by EMBL-EBI [guide](https://www.ebi.ac.uk/training/online/courses/alphafold/) 
+    <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px; display:inline-block; vertical-align:middle; margin-left:8px;">
+        <div style="background:#4caf50; width:39%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">39%</div>
+    </div>
+- [ ]Alphafold and friends by VIB/ How to use Alphafold with an HPC [course](https://elearning.vib.be/courses/alphafold/) 
+    <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px; display:inline-block; vertical-align:middle; margin-left:8px;">
+        <div style="background:#2196f3; width:20%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">0%</div>
+    </div>  
 
 ---
 
 ## ⚙️ Molecular Dynamics
 
 **GROMACS**  
-- [x] Install + run first tutorial  
-- [ ] Energy minimization + equilibration  
-- [ ] Protein-ligand MD simulation  
-
-<div style="background:#eee; border-radius:10px; overflow:hidden; width:300px; margin:6px 0">
-  <div style="background:#2196f3; width:33%; padding:4px 0; text-align:center; color:white">33%</div>
-</div>
-
+- [x] Local Installation of GROMACS [my blog post](https://delfoxav.github.io/posts/getting-started-with-local-md-simulation/)
+- [ ] Gromacs Introduction to Molecular Dynamics [course](https://tutorials.gromacs.org/md-intro-tutorial.html#)
+    <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px; display:inline-block; vertical-align:middle; margin-left:8px;">
+        <div style="background:#4caf50; width:39%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">50%</div>
+    </div>  
+- [ ] Biomolecular simulations by EMBL-EBI [course](https://www.ebi.ac.uk/training/materials/biomolecular-simulations-materials/)
+    <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px; display:inline-block; vertical-align:middle; margin-left:8px;">
+        <div style="background:#2196f3; width:20%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">0%</div>
+    </div>
 ---
 
-## 📖 General Bioinformatics
+## 📖 Pure Machine Learning
 
-**Background Reading**  
-- [x] Protein structure basics (secondary/tertiary structures)  
-- [ ] Molecular dynamics theory (thermostats, ensembles)  
-- [ ] Protein folding & inclusion bodies (review papers)  
+**LLMs**  
+- [x] How to build an LLM from scratch by Sebastian Raschka [book](https://github.com/rasbt/LLMs-from-scratch)  
+    <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px; display:inline-block; vertical-align:middle; margin-left:8px;">
+        <div style="background:#4caf50; width:10%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">80%</div>
+    </div>
+- [ ] How to build a reasoniing model from scratch by Sebastian Raschka (Not released yet)
 
-<div style="background:#eee; border-radius:10px; overflow:hidden; width:300px; margin:6px 0">
-  <div style="background:#ff9800; width:33%; padding:4px 0; text-align:center; color:white">33%</div>
-</div>
 
----
+**GNN**
+- [] Looking for good resources  
 
-## 🧭 Next Steps
 
-- Finish AlphaFold advanced module  
-- Run a full GROMACS MD simulation (protein in water box)  
-- Write short notes on inclusion body refolding  
-- Add a `resources.md` page with links to courses, tutorials, and papers
+## 🍺 Brewing
 
----
 
 *Last updated: {{ site.time | date: "%B %Y" }}*
