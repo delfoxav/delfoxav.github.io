@@ -20,7 +20,7 @@ Here I keep track of my current learning journey about a lot of topics.
     <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px; display:inline-block; vertical-align:middle; margin-left:8px;">
         <div style="background:#4caf50; width:39%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">39%</div>
     </div>
-- [ ]Alphafold and friends by VIB/ How to use Alphafold with an HPC [course](https://elearning.vib.be/courses/alphafold/) 
+- [ ] Alphafold and friends by VIB/ How to use Alphafold with an HPC [course](https://elearning.vib.be/courses/alphafold/) 
     <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px; display:inline-block; vertical-align:middle; margin-left:8px;">
         <div style="background:#2196f3; width:0%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">0%</div>
     </div>  
