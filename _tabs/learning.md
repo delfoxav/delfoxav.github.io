@@ -17,7 +17,7 @@ Here I keep track of my current learning journey about a lot of topics.
 **AlphaFold**  
 - [ ] A practical guide by EMBL-EBI [guide](https://www.ebi.ac.uk/training/online/courses/alphafold/) 
     <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px;  height:22px; display:inline-block; vertical-align:middle; margin-left:8px;">
-        <div style="background:#4caf50; width:39%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">39%</div>
+        <div style="background:#4caf50; width:55%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">55%</div>
     </div>
 - [ ] Alphafold and friends by VIB/ How to use Alphafold with an HPC [course](https://elearning.vib.be/courses/alphafold/) 
     <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px;  height:22px; display:inline-block; vertical-align:middle; margin-left:8px;">
@@ -49,8 +49,16 @@ Here I keep track of my current learning journey about a lot of topics.
 - [ ] How to build a reasoniing model from scratch by Sebastian Raschka (Not released yet)
 
 
+**Visualization**
+- [ ] 30 days of Streamlit at a self space [guide][https://30days.streamlit.app/]
+    <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px; height:22px; display:inline-block; vertical-align:middle; margin-left:8px;"> 
+            <div style="background:#4caf50; width:0%; height:100%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">0%</div>
+        </div>  
+
 **GNN**
 - [] Looking for good resources  
+
+
 
 
 ## 🍺 Brewing
