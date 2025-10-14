@@ -50,9 +50,9 @@ Here I keep track of my current learning journey about a lot of topics.
 
 
 **Visualization**
-- [ ] 30 days of Streamlit at a self space [guide](https://30days.streamlit.app/)
+- [ ] 30 days of Streamlit at a self pace [guide](https://30days.streamlit.app/)
     <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px; height:22px; display:inline-block; vertical-align:middle; margin-left:8px;"> 
-            <div style="background:#4caf50; width:0%; height:100%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">0%</div>
+            <div style="background:#4caf50; width:15%; height:100%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">15%</div>
         </div>  
 
 **GNN**
