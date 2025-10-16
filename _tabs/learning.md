@@ -10,16 +10,35 @@ order: 6
 
 Here I keep track of my current learning journey about a lot of topics.
 
+* Priority score: 0 (top) - 5 (low).
+
+
+<style>
+.priority { margin-left:8px; padding:3px 8px; border-radius:12px; font-size:0.9em; font-weight:600; display:inline-block; vertical-align:middle; color:#fff; }
+.priority-0{ background:#d32f2f; } /* highest */
+.priority-1{ background:#f57c00; }
+.priority-2{ background:#fbc02d; color:#000; }
+.priority-3{ background:#7cb342; color:#000; }
+.priority-4{ background:#388e3c; }
+.priority-5{ background:#9e9e9e; }
+.legend { font-size:0.9em; margin-bottom:12px; display:block; }
+</style>
+
+<span class="legend">Legend: P:0 = highest priority, P:5 = lowest</span>
 
 ---
 
+
 ## 🔬 Structural Biology
 **AlphaFold**  
-- [ ] A practical guide by EMBL-EBI [guide](https://www.ebi.ac.uk/training/online/courses/alphafold/) 
+- [ ] A practical guide by EMBL-EBI [guide](https://www.ebi.ac.uk/training/online/courses/alphafold/)
+<span class ="priority priority-1">P:1</span> 
     <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px;  height:22px; display:inline-block; vertical-align:middle; margin-left:8px;">
-        <div style="background:#4caf50; width:55%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">55%</div>
+        <div style="background:#4caf50; width:82%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">82%</div>
     </div>
-- [ ] Alphafold and friends by VIB/ How to use Alphafold with an HPC [course](https://elearning.vib.be/courses/alphafold/) 
+- [ ] Alphafold and friends by VIB/ How to use Alphafold with an HPC [course](https://elearning.vib.be/courses/alphafold/)
+
+<span class ="priority priority-4">P:4</span> 
     <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px;  height:22px; display:inline-block; vertical-align:middle; margin-left:8px;">
         <div style="background:#2196f3; width:0%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">0%</div>
     </div>  
@@ -29,11 +48,16 @@ Here I keep track of my current learning journey about a lot of topics.
 ## ⚙️ Molecular Dynamics
 **GROMACS**  
 - [x] Local Installation of GROMACS [my blog post](https://delfoxav.github.io/posts/getting-started-with-local-md-simulation/)
+
+<span class ="priority priority-5">P:5</span> 
 - [ ] Gromacs Introduction to Molecular Dynamics [course](https://tutorials.gromacs.org/md-intro-tutorial.html#)
+<span class ="priority priority-2">P:2</span> 
     <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px; height:22px; display:inline-block; vertical-align:middle; margin-left:8px;">
         <div style="background:#4caf50; width:50%; height:100%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">50%</div>
     </div>  
 - [ ] Biomolecular simulations by EMBL-EBI [course](https://www.ebi.ac.uk/training/materials/biomolecular-simulations-materials/)
+
+<span class ="priority priority-3">P:3</span> 
     <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px; height:22px; display:inline-block; vertical-align:middle; margin-left:8px;">
         <div style="background:#2196f3; width:0%; height:100%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">0%</div>
     </div>
@@ -42,23 +66,38 @@ Here I keep track of my current learning journey about a lot of topics.
 ## 📖 Pure Machine Learning
 
 **LLMs**  
-- [x] How to build an LLM from scratch by Sebastian Raschka [book](https://github.com/rasbt/LLMs-from-scratch)  
+- [x] How to build an LLM from scratch by Sebastian Raschka [book](https://github.com/rasbt/LLMs-from-scratch)
+
+<span class ="priority priority-1">P:1</span>   
     <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px; display:inline-block; vertical-align:middle; margin-left:8px;">
         <div style="background:#4caf50; width:80%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">80%</div>
     </div>
 - [ ] How to build a reasoniing model from scratch by Sebastian Raschka (Not released yet)
 
+<span class ="priority priority-5">P:5</span> 
+
 
 **Visualization**
 - [ ] 30 days of Streamlit at a self pace [guide](https://30days.streamlit.app/)
+
+<span class ="priority priority-3">P:3</span> 
     <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px; height:22px; display:inline-block; vertical-align:middle; margin-left:8px;"> 
             <div style="background:#4caf50; width:40%; height:100%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">40%</div>
         </div>  
 
 **GNN**
-- [] Looking for good resources  
+- [ ] Looking for good resources
+
+<span class ="priority priority-2">P:2</span>   
 
 
+**Process Automation**
+- [ ] Want to get my hands dirty with [opentron V2 api](https://docs.opentrons.com/v2/index.html)
+
+<span class ="priority priority-3">P:3</span>  
+- [ ] Want to learn a bit about Unity as well
+
+<span class ="priority priority-4">P:4</span> 
 
 
 ## 🍺 Brewing
