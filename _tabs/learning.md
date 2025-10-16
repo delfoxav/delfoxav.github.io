@@ -31,14 +31,11 @@ Here I keep track of my current learning journey about a lot of topics.
 
 ## 🔬 Structural Biology
 **AlphaFold**  
-- [ ] A practical guide by EMBL-EBI [guide](https://www.ebi.ac.uk/training/online/courses/alphafold/)
-<span class ="priority priority-1">P:1</span> 
+- [ ] A practical guide by EMBL-EBI [guide](https://www.ebi.ac.uk/training/online/courses/alphafold/) <span class ="priority priority-1">P:1</span> 
     <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px;  height:22px; display:inline-block; vertical-align:middle; margin-left:8px;">
         <div style="background:#4caf50; width:82%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">82%</div>
     </div>
-- [ ] Alphafold and friends by VIB/ How to use Alphafold with an HPC [course](https://elearning.vib.be/courses/alphafold/)
-
-<span class ="priority priority-4">P:4</span> 
+- [ ] Alphafold and friends by VIB/ How to use Alphafold with an HPC [course](https://elearning.vib.be/courses/alphafold/) <span class ="priority priority-4">P:4</span> 
     <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px;  height:22px; display:inline-block; vertical-align:middle; margin-left:8px;">
         <div style="background:#2196f3; width:0%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">0%</div>
     </div>  
@@ -47,17 +44,12 @@ Here I keep track of my current learning journey about a lot of topics.
 
 ## ⚙️ Molecular Dynamics
 **GROMACS**  
-- [x] Local Installation of GROMACS [my blog post](https://delfoxav.github.io/posts/getting-started-with-local-md-simulation/)
-
-<span class ="priority priority-5">P:5</span> 
-- [ ] Gromacs Introduction to Molecular Dynamics [course](https://tutorials.gromacs.org/md-intro-tutorial.html#)
-<span class ="priority priority-2">P:2</span> 
+- [x] Local Installation of GROMACS [my blog post](https://delfoxav.github.io/posts/getting-started-with-local-md-simulation/) <span class ="priority priority-5">P:5</span> 
+- [ ] Gromacs Introduction to Molecular Dynamics [course](https://tutorials.gromacs.org/md-intro-tutorial.html#) <span class ="priority priority-2">P:2</span> 
     <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px; height:22px; display:inline-block; vertical-align:middle; margin-left:8px;">
         <div style="background:#4caf50; width:50%; height:100%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">50%</div>
     </div>  
-- [ ] Biomolecular simulations by EMBL-EBI [course](https://www.ebi.ac.uk/training/materials/biomolecular-simulations-materials/)
-
-<span class ="priority priority-3">P:3</span> 
+- [ ] Biomolecular simulations by EMBL-EBI [course](https://www.ebi.ac.uk/training/materials/biomolecular-simulations-materials/) <span class ="priority priority-3">P:3</span> 
     <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px; height:22px; display:inline-block; vertical-align:middle; margin-left:8px;">
         <div style="background:#2196f3; width:0%; height:100%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">0%</div>
     </div>
@@ -66,38 +58,26 @@ Here I keep track of my current learning journey about a lot of topics.
 ## 📖 Pure Machine Learning
 
 **LLMs**  
-- [x] How to build an LLM from scratch by Sebastian Raschka [book](https://github.com/rasbt/LLMs-from-scratch)
-
-<span class ="priority priority-1">P:1</span>   
+- [x] How to build an LLM from scratch by Sebastian Raschka [book](https://github.com/rasbt/LLMs-from-scratch) <span class ="priority priority-1">P:1</span>   
     <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px; display:inline-block; vertical-align:middle; margin-left:8px;">
         <div style="background:#4caf50; width:80%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">80%</div>
     </div>
-- [ ] How to build a reasoniing model from scratch by Sebastian Raschka (Not released yet)
-
-<span class ="priority priority-5">P:5</span> 
+- [ ] How to build a reasoniing model from scratch by Sebastian Raschka (Not released yet) <span class ="priority priority-5">P:5</span> 
 
 
 **Visualization**
-- [ ] 30 days of Streamlit at a self pace [guide](https://30days.streamlit.app/)
-
-<span class ="priority priority-3">P:3</span> 
+- [ ] 30 days of Streamlit at a self pace [guide](https://30days.streamlit.app/) <span class ="priority priority-3">P:3</span> 
     <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px; height:22px; display:inline-block; vertical-align:middle; margin-left:8px;"> 
             <div style="background:#4caf50; width:40%; height:100%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">40%</div>
         </div>  
 
 **GNN**
-- [ ] Looking for good resources
-
-<span class ="priority priority-2">P:2</span>   
+- [ ] Looking for good resources <span class ="priority priority-2">P:2</span>   
 
 
 **Process Automation**
-- [ ] Want to get my hands dirty with [opentron V2 api](https://docs.opentrons.com/v2/index.html)
-
-<span class ="priority priority-3">P:3</span>  
-- [ ] Want to learn a bit about Unity as well
-
-<span class ="priority priority-4">P:4</span> 
+- [ ] Want to get my hands dirty with [opentron V2 api](https://docs.opentrons.com/v2/index.html) <span class ="priority priority-3">P:3</span>  
+- [ ] Want to learn a bit about Unity as well <span class ="priority priority-4">P:4</span> 
 
 
 ## 🍺 Brewing
