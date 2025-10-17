@@ -6,7 +6,7 @@ categories: [Projects, lab automation, biotech]
 tags: [biotech, lab automation, open source]
 ---
 
-{% assign image_path = "/assets/images/projects/biotech/Opentrons" %}
+{% assign image_path = "/assets/images/projects/biotech/Opentrons/" %}
 
 
 ## Table of contents
