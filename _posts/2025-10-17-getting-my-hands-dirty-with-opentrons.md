@@ -13,10 +13,7 @@ tags: [biotech, lab automation, open source]
 
 
 
-<span class="hover-text">
-  Hover over me
-  <img src="{{ image_path }}opentron_app_welcome.png" alt="Example Image" class="hover-image">
-</span>
+
 
 ## Table of contents
   - [Table of contents](#table-of-contents)
@@ -152,11 +149,20 @@ def run(protocol: protocol_api.ProtocolConext):
 For our serial dillution we will need a few hardware:
 
 
-- <a href="#" title="![Alt text](https://labware.opentrons.com/assets/opentrons_96_tiprack_300ul_side_view-B3f2FEVe.jpg)">a tip rack of 200uL </a>
+- <span class="hover-text">
+  a tip rack of 200uL
+  <img src="https://labware.opentrons.com/assets/opentrons_96_tiprack_300ul_side_view-B3f2FEVe.jpg" alt="opentrons_flex_96_tiprack_200ul" class="hover-image">
+</span>
 
-- <a href="#" title="![Alt text](https://labware.opentrons.com/assets/nest_12_reservoir_15ml_three_quarters-C4DoMux7.jpg)">a reservoir</a>
+- <span class="hover-text">
+  a reservoir
+  <img src="https://labware.opentrons.com/assets/nest_12_reservoir_15ml_three_quarters-C4DoMux7.jpg" alt="nest_12_reservoir_15ml" class="hover-image">
+</span>
 
-- <a href="#" title="![Alt text](https://labware.opentrons.com/assets/nest_96_wellplate_200ul_flat_three_quarters-C5JfYhtQ.jpg)">a 96-well plate </a>
+- <span class="hover-text">
+  a 96-well plate
+  <img src="https://labware.opentrons.com/assets/nest_96_wellplate_200ul_flat_three_quarters-C5JfYhtQ.jpg" alt="nest_96_wellplate_200ul_flat" class="hover-image">
+</span>
 
 We can load the labware using the `load_labware()` method of the protocol context. It takes two arguments: the standard labware name as defined in their [library](https://labware.opentrons.com/) and the position where the labware is placed on the robot's deck.
 
