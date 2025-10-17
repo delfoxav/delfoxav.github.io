@@ -32,9 +32,6 @@ Here I keep track of my current learning journey about a lot of topics.
 ## 🔬 Structural Biology
 **AlphaFold**  
 - [x] A practical guide by EMBL-EBI [guide](https://www.ebi.ac.uk/training/online/courses/alphafold/) <span class ="priority priority-5">P:5</span> 
-    <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px;  height:22px; display:inline-block; vertical-align:middle; margin-left:8px;">
-        <div style="background:#4caf50; width:100%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">100%</div>
-    </div>
 - [ ] Alphafold and friends by VIB/ How to use Alphafold with an HPC [course](https://elearning.vib.be/courses/alphafold/) <span class ="priority priority-4">P:4</span> 
     <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px;  height:22px; display:inline-block; vertical-align:middle; margin-left:8px;">
         <div style="background:#2196f3; width:0%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">0%</div>
@@ -55,6 +52,15 @@ Here I keep track of my current learning journey about a lot of topics.
     </div>
 ---
 
+
+## Biotechnology
+
+**Process Automation**
+- [x] Going through [opentron tutorial](https://docs.opentrons.com/v2/tutorial.html#tutorial) to get familiar with the library. Check my [blog post](https://delfoxav.github.io/posts/getting-my-hands-dirty-with-opentrons/)<span class ="priority priority-5">P:5</span>
+    
+---
+
+
 ## 📖 Pure Machine Learning
 
 **LLMs**  
@@ -71,19 +77,22 @@ Here I keep track of my current learning journey about a lot of topics.
             <div style="background:#4caf50; width:40%; height:100%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">40%</div>
         </div>  
 
+
 **GNN**
 - [ ] Looking for good resources <span class ="priority priority-2">P:2</span>   
-
-
-**Process Automation**
-- [x] Going through [opentron tutorial](https://docs.opentrons.com/v2/tutorial.html#tutorial) to get familiar with the library. Check my [blog post](https://delfoxav.github.io/posts/getting-my-hands-dirty-with-opentrons/)  <span class ="priority priority-5">P:5</span>
-    <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px; height:22px; display:inline-block; vertical-align:middle; margin-left:8px;"> 
-                <div style="background:#4caf50; width:100%; height:100%; padding:2px 100; text-align:center; color:white; font-size:0.9em;">100%</div>
-            </div> 
-- [ ] Want to learn a bit about Unity as well <span class ="priority priority-4">P:4</span> 
+---
 
 
 ## 🍺 Brewing
+
+---
+## Others
+
+
+- [ ] Want to learn a bit about Unity as well <span class ="priority priority-4">P:4</span> 
+<div style="background:#eee; border-radius:10px; overflow:hidden; width:180px; height:22px; display:inline-block; vertical-align:middle; margin-left:8px;"> 
+                <div style="background:#4caf50; width:0%; height:100%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">0%</div>
+            </div> 
 
 
 *Last updated: {{ site.time | date: "%B %Y" }}*
