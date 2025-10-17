@@ -9,6 +9,12 @@ tags: [biotech, lab automation, open source]
 {% assign image_path = "/assets/images/projects/biotech/Opentrons/" %}
 
 
+
+<span class="hover-text">
+  Hover over me
+  <img src="{{ image_path }}opentron_app_welcome.png" alt="Example Image" class="hover-image">
+</span>
+
 ## Table of contents
   - [Table of contents](#table-of-contents)
   - [Background](#background)
