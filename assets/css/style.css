@@ -1,0 +1,20 @@
+.hover-text {
+  position: relative; /* to position the image relative to the text */
+  cursor: pointer;
+  color: #007acc; /* optional, just makes text look clickable */
+}
+
+.hover-text .hover-image {
+  display: none; /* hide image by default */
+  position: absolute;
+  top: 100%; /* position below text */
+  left: 0;
+  width: 200px; /* adjust as needed */
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+.hover-text:hover .hover-image {
+  display: block; /* show image on hover */
+}
