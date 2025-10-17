@@ -76,10 +76,9 @@ Here I keep track of my current learning journey about a lot of topics.
 
 
 **Process Automation**
-- [ ] Want to get my hands dirty with [opentron V2 api](https://docs.opentrons.com/v2/index.html) <span class ="priority priority-3">P:3</span>
-- [ ] Going through [opentron tutorial] (https://docs.opentrons.com/v2/tutorial.html#tutorial) to get familiar with the library  <span class ="priority priority-1">P:1</span>
+- [x] Going through [opentron tutorial](https://docs.opentrons.com/v2/tutorial.html#tutorial) to get familiar with the library. Check my [blog post](https://delfoxav.github.io/posts/getting-my-hands-dirty-with-opentrons/)  <span class ="priority priority-5">P:5</span>
     <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px; height:22px; display:inline-block; vertical-align:middle; margin-left:8px;"> 
-                <div style="background:#4caf50; width:0%; height:100%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">0%</div>
+                <div style="background:#4caf50; width:100%; height:100%; padding:2px 100; text-align:center; color:white; font-size:0.9em;">100%</div>
             </div> 
 - [ ] Want to learn a bit about Unity as well <span class ="priority priority-4">P:4</span> 
 

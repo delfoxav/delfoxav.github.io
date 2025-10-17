@@ -320,3 +320,5 @@ opentrons_simulate <your_protocol>.py >> simulation.txt
 ## Conclusion and outlooks
 
 And that's it! Now the only thing nice would be to see an actual digital twin of the device move haha.
+
+You can also download the final code [here](https://raw.githubusercontent.com/username/repo/main/assets/files/projects/biotech/Opentrons/serial_dillution_tutorial.py){: download }.
