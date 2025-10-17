@@ -20,6 +20,8 @@ tags: [biotech, lab automation, open source]
   - [Background](#background)
   - [Installing their app](#installing-their-app)
   - [Creating a protocol with the python sdk](#creating-a-protocol-with-the-python-sdk)
+  - [Testing our protocol](#testing-our-protocol)
+  - [Conclusion and outlooks](#conclusion-and-outlooks)
   
 
 
@@ -99,7 +101,7 @@ Next in the same file we have to specify the metadata in a dictionary format. Th
 
 ```python
 metadata = {
- "apiLevel": "2.16",
+ "apiLevel": "2.22", # first api version to support liquid labeling
     "protocolName": "Serial Dilution Tutorial",
     "description": """This protocol is the outcome of following the
                    Python Protocol API Tutorial located at
@@ -132,7 +134,7 @@ metadata = {
     "author": "Xavier"
 }
 
-requirements = ["robotType": "Flex", "apiLevel": "2.16"]
+requirements = {"robotType": "Flex", "apiLevel": "2.22"}
 ```
 
 ### The `run()` function
@@ -185,3 +187,136 @@ Opentrons assigns letter to the row and numbers to the columns (starting from th
     <img src="{{ image_path }}initial-deck-map-flex.png" alt="The initial labware setup for our run" width="600px">
     <p><em>Figure 2: The initial labware setup for our run</em></p>
 </div>
+
+### Labelling liquids
+
+It looks like labelling liquids isn't necessary for python protocol but I tend to prefer having everything labeled so let's dig into that.
+
+In this exercise we basically used some clear water and dyed water (blue). Thus we can define our liquids. 
+
+We use the method `define_liquid` of protocol. 
+
+```python
+
+SolventWater = protocol.define_liquid(
+    name="water",
+    description="Non colored water for demo",
+    display_color="#FFFFFF",
+)
+blueWater = protocol.define_liquid(
+    name="Blue water",
+    description="Blue colored water for demo",
+    display_color="#0000FF",
+)
+
+```
+As you can see, we can give a name, a description and a display color for the simulation. I opted for a white color for the non dyed water and a blue color for the dyed one.
+
+Next we can load the reservoir with our water. According to the tutorial sneak peek, we the diluent in column 1 and the solution in column 2. As we are working with water, and a 15 mL reservoir, we can load ~14 mL at each position. 
+
+```python
+
+reservoir.load_liquid(
+    wells = ["A1"],
+    volume = 14000, # we expect uL
+    liquid = SolventWater
+)
+reservoir.load_liquid(
+    wells = ["A2"],
+    volume = 14000, # we expect uL
+    liquid = BlueWater
+)
+```
+
+Here we basically said:
+
+" At the position A1 of the reservoir, one should put 14 mL of water." 
+" At the position A2 of the reservoir, one should put 14 mL of dyed water."
+
+It is just a label! We didn't manipulates any liquids!
+
+### Trash Bin
+
+Next we have to define the trash bin (as we will discard some tips). For the flex, we can put the trash bin wherever we want. We can load a trash bin using the `load_trash_bin()` method with a single argument being its location.
+
+```python
+trash = protocol.load_trash_bin("A3")
+```
+
+### Pipettes
+
+Now we can specify what pipette to use with this protocol. To do so we use the `Load_instrument()` method. It takes two arguments, the name of the pipette and the mount it is installed in. The tip racks should be specified when performing transfers. We have to follow the [standard pipette name](https://docs.opentrons.com/v2/pipettes/loading.html#new-pipette-models). In our case, as we will make dillutions, work with 200 uL wells and the flex. We go or the Flex 1-Channel Pipette 5-1000 and we assume it is on the left position.
+
+```python
+left_pipette = protocol.load_instrument("flex_1channel_1000", "left", tip_racks=[tips])
+```
+
+defining `tip_racks` was optional but now that it is set, `tips` is assigned to the `left_pipette` meaning that the robot will use it when commanded to pick up tips.
+
+### Commands
+
+Finally, everything is in place, so we can start giving pipetting commands. To break down a serial dillution we have three main phases.
+
+1. Measure out equal amounts of diluent from the reservoir to every well on the plate.
+2. Measure out equal amount of solution from the reservoir into wells in the first column of the plate
+3. Move a portion of the combined liquid from column 1 to 2, then from 2 to 3 and so on al the way to column 12.
+
+using the ``transfer()`` method, each of these phase can be accomplished with a single line of code.
+
+We can start with the first phase, the diluent. `transfer()` can handle this and we can spread it to all the wells.
+
+```python
+left_pipette.transfer(100, reservoir["A1"], plate.wells())
+```
+
+Here we are putting 100 uL of whatever liquid is in the first position of the reservoir to each well of the plate.
+
+Now we can move to the second phase and third phase. Using a for loop it is in fact really easy. We know that the 96 wells plate is 8*12. So we have 8 columns.
+
+```python
+
+for i in range(8):
+    row = plate.rows()[i] # called the i-th row
+    # 2nd phase
+    left_pipette.transfer(100, # take 100 uL
+                          reservoir['A2'], # from the second position of reservoir
+                          row[0], # put them in the first well of the row
+                          mix_after=(3, 50) # mix 3 times with 50 uL after dispensing
+                          )
+    
+    # 3rd phase
+    left_pipette.transfer(100, # take 100 uL
+                          row[:11], # from all the wells but the last
+                          row[1:], # put to all the wells but the first
+                          mix_after=(3, 50) # mix 3 times with 50 uL after dispensing
+                          )
+```
+
+The transfer method is really handy. It accept lists as source and destination arguments.
+
+In the 3rd phase above, we basically said. "Move a portion of the combined liquid from column 1 to 2, then from 2 to 3 and so on al the way to column 12."
+
+And that's it. We can now save our script as a .py file and test the protocol.
+
+
+## Testing our protocol
+
+Opentrons also provide a nice "text result" simulation tool. by calling:
+
+```bash
+
+opentrons_simulate <your_protocol>.py
+
+```
+
+You can simulate the full protocol and see what it does. That would output a huge number of lines as tere's a lot of manipulation. If like me you want to inspect the results, you can redirect the output to a file.
+
+```bash
+
+opentrons_simulate <your_protocol>.py >> simulation.txt
+
+```
+
+## Conclusion and outlooks
+
+And that's it! Now the only thing nice would be to see an actual digital twin of the device move haha.
