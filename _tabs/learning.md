@@ -31,9 +31,9 @@ Here I keep track of my current learning journey about a lot of topics.
 
 ## 🔬 Structural Biology
 **AlphaFold**  
-- [ ] A practical guide by EMBL-EBI [guide](https://www.ebi.ac.uk/training/online/courses/alphafold/) <span class ="priority priority-1">P:1</span> 
+- [x] A practical guide by EMBL-EBI [guide](https://www.ebi.ac.uk/training/online/courses/alphafold/) <span class ="priority priority-5">P:5</span> 
     <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px;  height:22px; display:inline-block; vertical-align:middle; margin-left:8px;">
-        <div style="background:#4caf50; width:82%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">82%</div>
+        <div style="background:#4caf50; width:100%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">100%</div>
     </div>
 - [ ] Alphafold and friends by VIB/ How to use Alphafold with an HPC [course](https://elearning.vib.be/courses/alphafold/) <span class ="priority priority-4">P:4</span> 
     <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px;  height:22px; display:inline-block; vertical-align:middle; margin-left:8px;">
