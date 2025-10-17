@@ -6,7 +6,10 @@ categories: [Projects, lab automation, biotech]
 tags: [biotech, lab automation, open source]
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/hover-image.css' | relative_url }}">
+
 {% assign image_path = "/assets/images/projects/biotech/Opentrons/" %}
+
 
 
 
