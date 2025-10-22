@@ -87,10 +87,9 @@ Here I keep track of my current learning journey about a lot of topics.
 ## Others
 
 
-- [ ] Want to learn a bit about Unity as well <span class ="priority priority-4">P:4</span> 
+- [ ] [Unity Essentials pathway](https://learn.unity.com/pathway/unity-essentials)<span class ="priority priority-2">P:2</span>
 <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px; height:22px; display:inline-block; vertical-align:middle; margin-left:8px;"> 
-                <div style="background:#4caf50; width:0%; height:100%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">0%</div>
+                <div style="background:#4caf50; width:18%; height:100%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">18%</div>
             </div> 
-
 
 *Last updated: {{ site.time | date: "%B %Y" }}*
