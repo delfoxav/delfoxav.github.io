@@ -43,7 +43,6 @@ Here I keep track of my current learning journey about a lot of topics.
 **GROMACS**  
 - [x] Local Installation of GROMACS [my blog post](https://delfoxav.github.io/posts/getting-started-with-local-md-simulation/) 
 - [x] Gromacs Introduction to Molecular Dynamics [course](https://tutorials.gromacs.org/md-intro-tutorial.html#) 
-   
 - [ ] Biomolecular simulations by EMBL-EBI [course](https://www.ebi.ac.uk/training/materials/biomolecular-simulations-materials/) <span class ="priority priority-3">P:3</span> 
     <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px; height:22px; display:inline-block; vertical-align:middle; margin-left:8px;">
         <div style="background:#2196f3; width:0%; height:100%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">0%</div>
