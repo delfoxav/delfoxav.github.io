@@ -69,7 +69,10 @@ Here I keep track of my current learning journey about a lot of topics.
 
 **Optimization**
 
-- [ ] Getting my hands dirty on Baysian Optimization <span class ="priority priority-2">P:2</span>   
+- [ ] Going through [A Tutorial on Bayesian Optimization of
+Expensive Cost Functions, with Application to
+Active User Modeling and Hierarchical
+Reinforcement Learning](https://arxiv.org/pdf/1012.2599) <span class ="priority priority-2">P:2</span>   
     <div style="background:#eee; border-radius:10px; overflow:hidden; width:180px; height:22px; display:inline-block; vertical-align:middle; margin-left:8px;"> 
             <div style="background:#4caf50; width:0%; height:100%; padding:2px 0; text-align:center; color:white; font-size:0.9em;">0%</div>
         </div>
